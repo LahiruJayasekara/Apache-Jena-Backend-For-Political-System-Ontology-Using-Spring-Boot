@@ -1,0 +1,1377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/viva/ontologies/2019/6/politicians"
+     xml:base="http://www.semanticweb.org/viva/ontologies/2019/6/politicians"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:politicians="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasChiefMinister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasChiefMinister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasHead"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isChiefMinisterOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ChiefMinister"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasCouncillor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasCouncillor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMemberOfInstitution"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfCouncil"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LocalGovernmentBody"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Councillor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasDeputyMinister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasDeputyMinister">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isDeputyMinisterOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#DeputyMinister"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasDistrict -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasDistrict">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isDistrictOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasElected -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasElected">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isElectedFrom"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasHead -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasHead">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isHeadOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMayor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMayor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasHead"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMayorOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Mayor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMemberOfInstitution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMemberOfInstitution">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfInstitution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMinister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMinister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasHead"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMinisterOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasParliamentMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasParliamentMember">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMemberOfInstitution"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfParliament"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasPartyMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasPartyMember">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfParty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Party"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasPresident -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasPresident">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasHead"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isPresidentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#State"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#President"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasProvincialCouncil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasProvincialCouncil">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isProvicialCouncilOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasProvincialMinistry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasProvincialMinistry">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isProvincialMinistryOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasSpeaker -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasSpeaker">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasHead"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isSpeakerOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Speaker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isChiefMinisterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isChiefMinisterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isHeadOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ChiefMinister"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isDeputyMinisterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isDeputyMinisterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#DeputyMinister"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isDistrictOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isDistrictOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isElectedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isElectedFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isHeadOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isHeadOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMayorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMayorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isHeadOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Mayor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfCouncil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfCouncil">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfInstitution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Councillor"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LocalGovernmentBody"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfInstitution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfInstitution">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfParliament -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfParliament">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfInstitution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfParty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfParty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Party"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMinisterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMinisterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isHeadOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isPresidentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isPresidentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isHeadOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#President"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isProvicialCouncilOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isProvicialCouncilOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isProvincialMinistryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isProvincialMinistryOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isSpeakerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isSpeakerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isHeadOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Speaker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasBirthDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasBirthDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasLabel">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ChiefMinister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ChiefMinister">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isChiefMinisterOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Councillor"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Mayor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Councillor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Councillor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfCouncil"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#DeputyMinister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#DeputyMinister">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isDeputyMinisterOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#OppositionLeader"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Speaker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isDistrictOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LeftistParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LeftistParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Party"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RightistParty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LocalGovernmentBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LocalGovernmentBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Mayor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Mayor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMayorOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Councillor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfParliament"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMinisterOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfCouncil"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasMinister"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LocalGovernmentBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#OppositionLeader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#OppositionLeader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Party -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Party"/>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution"/>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isMemberOfParty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Party"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#President -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#President">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isPresidentOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#State"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Politician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PrimeMinister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PrimeMinister">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#hasDistrict"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isProvicialCouncilOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RightistParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RightistParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RuralCouncil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RuralCouncil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LocalGovernmentBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Speaker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Speaker">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#isSpeakerOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#State"/>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UrbanCouncil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UrbanCouncil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LocalGovernmentBody"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#AkilaVirajKariyawasam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#AkilaVirajKariyawasam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister"/>
+        <politicians:isElectedFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kurunegala"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP"/>
+        <politicians:isMinisterOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#AnuraKumara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#AnuraKumara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#JVP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#CentralProvince -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#CentralProvince">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#CentralProvincialCouncil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#CentralProvincialCouncil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+        <politicians:isProvicialCouncilOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#CentralProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Colombo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Colombo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <politicians:isDistrictOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ColomboMunicipalCouncil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ColomboMunicipalCouncil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#DehiwalMtLaviniaMuniciapalCouncil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#DehiwalMtLaviniaMuniciapalCouncil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Galle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Galle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <politicians:isDistrictOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Gampaha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Gampaha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <politicians:isDistrictOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Hambantota -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Hambantota">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <politicians:isDistrictOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#HarinFernando -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#HarinFernando">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP"/>
+        <politicians:isMinisterOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfSports"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#IsuraDevapriya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#IsuraDevapriya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ChiefMinister"/>
+        <politicians:isChiefMinisterOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvincialCouncil"/>
+        <politicians:isMemberOfCouncil rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvincialCouncil"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SLFP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#JVP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#JVP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LeftistParty"/>
+        <politicians:hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Janatha Vimukthi Peramuna</politicians:hasLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kalutara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kalutara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <politicians:isDistrictOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kandy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kandy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <politicians:isDistrictOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#CentralProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#KaruJayasuriya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#KaruJayasuriya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Speaker"/>
+        <politicians:isElectedFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Gampaha"/>
+        <politicians:isSpeakerOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#KesbewaRuralCouncil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#KesbewaRuralCouncil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RuralCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#KesbewaUrbanConcil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#KesbewaUrbanConcil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UrbanCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kurunegala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kurunegala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <politicians:isDistrictOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#NorthWesternProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MahindaRajapakse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MahindaRajapakse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#OppositionLeader"/>
+        <politicians:isElectedFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kurunegala"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SLFP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MaithreepalaSirisena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MaithreepalaSirisena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#President"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SLFP"/>
+        <politicians:isPresidentOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SriLanka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MangalaSamaraweera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MangalaSamaraweera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister"/>
+        <politicians:isElectedFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Matara"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP"/>
+        <politicians:isMinisterOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfFinance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Matara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Matara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+        <politicians:isDistrictOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry"/>
+        <politicians:hasMinister rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#AkilaVirajKariyawasam"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducationCP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducationCP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+        <politicians:isProvincialMinistryOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#CentralProvincialCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducationSP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducationSP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+        <politicians:isProvincialMinistryOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvincialCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducationWP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfEducationWP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+        <politicians:isProvincialMinistryOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvincialCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfFinance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfFinance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry"/>
+        <politicians:hasMinister rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MangalaSamaraweera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfForeignAffairs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfForeignAffairs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry"/>
+        <politicians:hasMinister rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ThilakMarapana"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry"/>
+        <politicians:hasMinister rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RajithaSenarathna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealthCP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealthCP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealthSP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealthSP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealthWP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealthWP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfSports -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfSports">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfTransport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfTransport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#StateMinistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfTransportationCP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfTransportationCP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfTransportationWP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfTransportationWP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfTrasportationSP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfTrasportationSP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialMinistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MoratuwaMunicipalCouncil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MoratuwaMunicipalCouncil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#NamalRajapakse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#NamalRajapakse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MemberOfParliament"/>
+        <politicians:isElectedFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Hambantota"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SLFP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#NorthWesternProvince -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#NorthWesternProvince">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#NorthWesternProvincialCouncil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#NorthWesternProvincialCouncil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RajithaSenarathna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RajithaSenarathna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister"/>
+        <politicians:isElectedFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Kalutara"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP"/>
+        <politicians:isMinisterOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfHealth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RanilWickramasinghe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RanilWickramasinghe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PrimeMinister"/>
+        <politicians:isElectedFrom rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Colombo"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RosySenanayake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RosySenanayake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Mayor"/>
+        <politicians:isMayorOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ColomboMunicipalCouncil"/>
+        <politicians:isMemberOfCouncil rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ColomboMunicipalCouncil"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SLFP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SLFP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LeftistParty"/>
+        <politicians:hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sri Lanka Freedom Party</politicians:hasLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SamanlalFernando -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SamanlalFernando">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Mayor"/>
+        <politicians:isMayorOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MoratuwaMunicipalCouncil"/>
+        <politicians:isMemberOfCouncil rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MoratuwaMunicipalCouncil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ShanWijayalalDeSilva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ShanWijayalalDeSilva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ChiefMinister"/>
+        <politicians:isChiefMinisterOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvincialCouncil"/>
+        <politicians:isMemberOfCouncil rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvincialCouncil"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SLFP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvince -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvince">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvincialCouncil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvincialCouncil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+        <politicians:isProvicialCouncilOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SouthernProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SriLanka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#SriLanka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#State"/>
+        <politicians:hasPresident rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MaithreepalaSirisena"/>
+        <politicians:hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic Socialist Republic of Sri Lanka</politicians:hasLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ThilakMarapana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ThilakMarapana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Minister"/>
+        <politicians:isMemberOfParliament rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ParliamentOfSriLanka"/>
+        <politicians:isMemberOfParty rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP"/>
+        <politicians:isMinisterOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MinistryOfForeignAffairs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UNP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RightistParty"/>
+        <politicians:hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United National Party</politicians:hasLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvince -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvince">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvincialCouncil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvincialCouncil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+        <politicians:isProvicialCouncilOf rdf:resource="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#WesternProvince"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#District"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Ministry"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Party"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PoliticalInstitution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Province"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#State"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#LocalGovernmentBody"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Parliament"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#ProvincialCouncil"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#MunicipalCouncil"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#RuralCouncil"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#UrbanCouncil"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#OppositionLeader"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#PrimeMinister"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/viva/ontologies/2019/6/politicians#Speaker"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
